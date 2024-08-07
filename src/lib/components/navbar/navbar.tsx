@@ -34,10 +34,9 @@ export default function NavBar () {
             <Link 
               href={link.href} 
               className={cn({
-                'text-slate-950': currentPath === link.href,
-                'text-slate-500': currentPath !== link.href ,
-                'hover:text-slate-950': true,
-                'transition-colors': true,
+                'text-zinc-900': currentPath === link.href,
+                'text-zinc-500': currentPath !== link.href ,
+                'hover:text-zinc-800 transition-colors': true,
                 'font-semibold': true,
                 'text-xl': true,
               })} 
