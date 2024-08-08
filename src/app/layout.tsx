@@ -2,7 +2,7 @@ import '@radix-ui/themes/styles.css';
 import './theme-config.css';
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Swanky_and_Moo_Moo } from "next/font/google";
+import { Inter } from "next/font/google";
 import NavBar from "@/lib/components/navbar/navbar";
 import { Theme, ThemePanel } from '@radix-ui/themes';
 
