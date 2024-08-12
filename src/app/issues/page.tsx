@@ -1,14 +1,20 @@
+import prisma from '@/.././../prisma/client';
 import { Button } from "@radix-ui/themes";
-import Link from 'next/link';
+import NextLink from 'next/link';
+import IssueTable from './_components/issue.table';
 
-const IssuesPage = () => {
+const IssuesPage = async () => {
+  const issues = await prisma.issue.findMany();
   return (
     <div className="">
-      <Button>
-        <Link href="issues/new">
-          New Issue
-        </Link>
-      </Button>
+      <div className="mb-7">
+        <Button>
+          <NextLink href="issues/new">
+            New Issue
+          </NextLink>
+        </Button>
+      </div>
+      <IssueTable issues={issues}/>
     </div>
   )
 }
